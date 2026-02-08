@@ -3,7 +3,8 @@ package com.nit.main;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 import com.nit.beans.Employee;
-import com.nit.beans.Student;
+import com.nit.beans.Product;
+//import com.nit.beans.Student;
 
 public class StudentMain {
 	public static void main(String[] args) {
@@ -17,6 +18,9 @@ public class StudentMain {
 //		Employee e1 = (Employee) ctx.getBean("employee");
 //		System.out.println(e1.displayInfo());
 		
+		//Product
+		Product product =(Product) ctx.getBean("product");
+		System.out.println(product.showDetails());
 		
 	}
 }

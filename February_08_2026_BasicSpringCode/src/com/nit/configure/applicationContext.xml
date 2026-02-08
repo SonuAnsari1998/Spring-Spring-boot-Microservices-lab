@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
        http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- Bean definition -->
-    
-    <!-- Student -->
-    <bean id="student" class ="com.nit.beans.Student">
-    <property name="name" value="sonu"></property>
-    </bean>
-    
-    
-    <!-- Employee -->
-    <bean name="employee" class="com.nit.beans.Employee">
-    <property name="name" value="sonu"></property>
-    <property name="salary" value="685000"></property>
-    </bean>
-    
+	<!-- Bean definition -->
 
-    
+	<!-- Student -->
+	<bean id="student" class="com.nit.beans.Student">
+		<property name="name" value="sonu"></property>
+	</bean>
+
+
+	<!-- Employee -->
+	<bean name="employee" class="com.nit.beans.Employee">
+		<property name="name" value="sonu"></property>
+		<property name="salary" value="685000"></property>
+	</bean>
+
+	<bean name="product" class="com.nit.beans.Product">
+		<property name="ProductName" value="Laptop"></property>
+		<property name="price" value="65000"></property>
+		<property name="category" value="Electronic"></property>
+	</bean>
 
 </beans>
