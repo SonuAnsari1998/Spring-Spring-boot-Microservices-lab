@@ -7,7 +7,7 @@ public class Test {
 	public static void main(String[] args) {
 		FileSystemXmlApplicationContext ctx = new FileSystemXmlApplicationContext(
 				"src/com/nit/configure/applicationContext.xml");
-		
+
 		Object obj = ctx.getBean("wmg");
 		WishMessageGenerator generator = (WishMessageGenerator) obj;
 		String result = generator.showMessage("sonu");
