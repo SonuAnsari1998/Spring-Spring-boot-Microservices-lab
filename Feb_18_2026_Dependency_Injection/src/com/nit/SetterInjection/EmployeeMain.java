@@ -1,14 +1,14 @@
 package com.nit.SetterInjection;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 public class EmployeeMain {
 	public static void main(String[] args) {
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-				"com/nit/DependencyInjection/configureContext.xml");
-
-		Employee bean = (Employee) context.getBean("emp");
+		ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+		Employee bean = context.getBean(Employee.class);
 		System.out.println(bean);
+
 	}
 }

@@ -4,6 +4,15 @@ public class Employee {
 	private int id;
 	private String name;
 	private double salary;
+	private Product product;
+
+	public Product getProduct() {
+		return product;
+	}
+
+	public void setProduct(Product product) {
+		this.product = product;
+	}
 
 	public int getId() {
 		return id;
@@ -31,7 +40,7 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee id=" + id + "\nName=" + name + "\nSalary=" + salary;
+		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + ", product=" + product + "]";
 	}
 
 }
