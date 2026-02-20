@@ -1,7 +1,13 @@
 package com.nit.SetterInjection;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Product {
+	@Value("123")
 	private int id;
+	@Value("Mobile")
 	private String name;
 
 	public int getId() {

@@ -1,26 +1,28 @@
 package com.nit.SetterInjection;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
+@ComponentScan(basePackages = "com.nit")
 public class Config {
 
-	@Bean("emp")
-	public Employee name() {
-		Employee emp=new Employee();
-		emp.setId(101);
-		emp.setName("John");
-		emp.setProduct(name1());
-		return emp;
-	}
+//	@Bean("emp")
+//	public Employee name() {
+//		Employee emp=new Employee();
+//		emp.setId(101);
+//		emp.setName("John");
+//		emp.setProduct(name1());
+//		return emp;
+//	}
 	
-	@Bean
-	public Product name1() {
-		Product p=new Product();
-		p.setId(1001);
-		p.setName("Laptop");
-		return p;
-	}
+//	
+//	public Product name1() {
+//		Product p=new Product();
+//		p.setId(1001);
+//		p.setName("Laptop");
+//		return p;
+//	}
 	
 }

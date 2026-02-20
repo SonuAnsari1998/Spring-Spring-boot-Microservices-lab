@@ -1,41 +1,36 @@
 package com.nit.SetterInjection;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+
 public class Employee {
+	@Value("101")
 	private int id;
+	@Value("sonu")
 	private String name;
+	@Value("78555")
 	private double salary;
+	@Autowired
 	private Product product;
 
 	public Product getProduct() {
 		return product;
 	}
 
-	public void setProduct(Product product) {
-		this.product = product;
-	}
-
 	public int getId() {
 		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getName() {
 		return name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
 	public double getSalary() {
 		return salary;
-	}
-
-	public void setSalary(double salary) {
-		this.salary = salary;
 	}
 
 	@Override

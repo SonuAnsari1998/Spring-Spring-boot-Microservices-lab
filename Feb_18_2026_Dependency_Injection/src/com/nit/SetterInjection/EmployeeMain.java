@@ -8,7 +8,9 @@ public class EmployeeMain {
 	public static void main(String[] args) {
 		ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
 		Employee bean = context.getBean(Employee.class);
+		
 		System.out.println(bean);
-
+		Employee bean2 = context.getBean(Employee.class);
+		System.out.println(bean2);
 	}
 }
