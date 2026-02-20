@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component("fpkt")
 public class Flipkart {
 	@Autowired
-	@Qualifier("bDart")
+	@Qualifier("dtdc")
 	private ICourier courier;
 
 	public String shopping(String items[], double price[]) {
