@@ -21,6 +21,13 @@
     	<bean id="wmg2" class="com.nit.sbeans.CalendarService">
     	<property name="date" ref="ldate2"/>
     	</bean> 
+    	
+    	
+    	<bean id="ldate3" class="java.time.LocalDate" factory-method="now"/>
+    	
+    	<bean id="wmg3" class="com.nit.sbeans.YearService">
+    	<property name="date" ref="ldate3"/>
+    	</bean> 
     
     	
     	
