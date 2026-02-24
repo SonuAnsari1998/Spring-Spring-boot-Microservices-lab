@@ -13,7 +13,7 @@ public class SchedulerService {
 
 
 	public String getDay() {
-		DayOfWeek day = lDate.getDayOfWeek();
+		DayOfWeek day = lDate.getDayOfWeek();//SATURDAT 
 		if (day == DayOfWeek.FRIDAY) {
 			return "Schedule weekly report email.";
 		} else if (day == DayOfWeek.MONDAY) {

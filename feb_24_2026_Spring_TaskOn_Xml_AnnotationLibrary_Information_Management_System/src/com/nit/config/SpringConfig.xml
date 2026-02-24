@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Enables @Autowired, @PostConstruct, @PreDestroy etc -->
+   <context:annotation-config/>
+
+    <!-- Bean definition -->
+    <bean id="author" class="com.nit.sbeans.Author">
+        <constructor-arg name="authorId" value="10" />
+        <constructor-arg name="authorName" value="Jemes" />
+    </bean>
+
+    <bean id="book1" class="com.nit.sbeans.Book">
+        <constructor-arg name="bookId" value="110" />
+        <constructor-arg name="bookTitle" value="Java" />
+    </bean>
+
+    <bean id="book2" class="com.nit.sbeans.Book">
+        <constructor-arg name="bookId" value="111" />
+        <constructor-arg name="bookTitle" value="Python" />
+    </bean>
+
+    <bean id="library" class="com.nit.sbeans.Library">
+        <constructor-arg name="libraryName" value="Naresh IT" />
+        <constructor-arg name="book">
+            <list>
+                <ref bean="book1" />
+                <ref bean="book2" />
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="librarian" class="com.nit.sbeans.Librarian">
+        <property name="employeeName" value="Amit Kumar" />
+    </bean>
+
+</beans>
