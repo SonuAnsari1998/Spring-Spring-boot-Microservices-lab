@@ -5,6 +5,7 @@ public class Engine {
 	int horsePower;
 
 	public Engine(String engineType, int horsePower) {
+		System.out.println("Engine.Engine()");
 		super();
 		this.engineType = engineType;
 		this.horsePower = horsePower;
@@ -12,8 +13,8 @@ public class Engine {
 	
 	public String  showEngineDetails() {
 		return "Engine Details :"+
-				"\nEngine Type: "+this.engineType+
-				"\nHorse Power: "+this.horsePower;
+				" Engine Type: "+this.engineType+
+				", Horse Power: "+this.horsePower;
 	}
 
 }

@@ -8,23 +8,30 @@ public class Vehicle {
 	Tyre tyre;
 
 	public void setVehicleName(String vehicleName) {
+		System.out.println("Vehicle.setVehicleName()");
 		this.vehicleName = vehicleName;
 	}
 	
 	public Vehicle(Engine engine) {
+		System.out.println("Vehicle.Vehicle()");
 		this.engine = engine;
 	}
 
-	@Autowired
-	public void setTyre(Tyre tyre) {
-		this.tyre = tyre;
-	}
+	
+	
 	
 	
 
 
 	public String displayVehicleInfo() {
-		return "Vehicle [vehicleName=" + vehicleName + ", engine=" + engine + ", tyre=" + tyre + "]";
+		return "Vehicle Name:"+vehicleName+engine.showEngineDetails()+" "+tyre.showTyreDetails();
+	}
+
+
+   
+	public void setTyre(Tyre tyre) {
+    	System.out.println("Vehicle.setTyre()");
+		this.tyre = tyre;
 	}
 
 }
