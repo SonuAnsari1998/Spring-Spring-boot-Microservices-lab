@@ -20,7 +20,8 @@ public class Librarian {
 
 
 	public String manageLibrary() {
-		return "Librarian [library=" + library.showLibraryData() + ", employeeName=" + employeeName + "]";
+//		return "Librarian [library=" + library.showLibraryData() + ", employeeName=" + employeeName + "]";
+	return "Library: "+library.libraryName+"\nManaged By: "+employeeName+"\nBooks Available:\n"+library.showLibraryData();
 	}
 	
 	

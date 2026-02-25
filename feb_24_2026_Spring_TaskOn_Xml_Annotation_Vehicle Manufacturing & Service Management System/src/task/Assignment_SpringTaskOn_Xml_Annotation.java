@@ -170,10 +170,10 @@ Books Available:
 
 
 Task 3 — Employee Project Management System
-
 Objective
 
-Showcase a hybrid Spring Core setup with both Constructor and Setter Injection, managing employee-project relations using XML + annotation configuration.
+Showcase a hybrid Spring Core setup with both Constructor and Setter Injection, managing 
+employee-project relations using XML + annotation configuration.
 Class-wise Design
 1️. Project
 

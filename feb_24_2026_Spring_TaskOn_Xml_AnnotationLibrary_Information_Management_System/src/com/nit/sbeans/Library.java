@@ -12,7 +12,7 @@ public class Library {
 	}
 
 	public String showLibraryData() {
-		return "Library [libraryName=" + libraryName + ", book=" + book + "]";
+		return ""+book;
 	}
 	
 	

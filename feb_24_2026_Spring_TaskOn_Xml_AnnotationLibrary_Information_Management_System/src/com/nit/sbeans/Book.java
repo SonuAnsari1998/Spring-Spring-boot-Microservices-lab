@@ -17,8 +17,8 @@ public class Book {
 		this.author = author;
 	}
 
-	public String displayBookDetails() {
-		return "Book [bookId=" + bookId + ", bookTitle=" + bookTitle + ", author=" + author.displayAuthorInfo() + "]";
+	public String toString() {
+		return "Book :" + bookTitle + "| Author: " + author.authorName+"\n";
 	}
 	
 	
