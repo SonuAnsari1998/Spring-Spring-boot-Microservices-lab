@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class NotificationService {
 	@Autowired
-	@Qualifier("emailService")
+	@Qualifier("whatsAppService")
 	MessageService messageService;
 
 	public void notifyUser(String msg) {
