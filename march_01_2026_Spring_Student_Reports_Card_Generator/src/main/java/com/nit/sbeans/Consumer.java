@@ -8,10 +8,8 @@ import lombok.Data;
 @Component
 @Data
 @AllArgsConstructor
-public class Student {
-	private int id;
+public class Consumer {
+	private int consumerId;
 	private String name;
-	private double mathMarks;
-	private double scienceMarks;
-	private double englishMarks;
+	private double  unitsConsumed;
 }

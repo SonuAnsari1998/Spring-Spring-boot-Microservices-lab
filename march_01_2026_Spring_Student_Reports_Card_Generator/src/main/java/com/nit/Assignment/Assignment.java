@@ -1,46 +1,50 @@
 package com.nit.Assignment;
 
 /*=========================================
-Practice Task 1 - Student Report Card Generator
+Practice Task 2 - Electricity Bill Calculator
 =========================================
 
 Objective:
-Generate a student report card using Spring Core annotations only.
+Calculate electricity bill using Spring DI annotations only.
 
 Requirements:
 
 Classes to Create:
 
-=> Student.java - Annotate with @Component
-   Fields: id (int), name (String), mathMarks (double), scienceMarks (double), englishMarks (double)
-   Initialize values using constructor or setter.
+=> Consumer.java - Annotate with @Component
+   Fields: consumerId (int), name (String), unitsConsumed (double)
+   Initialize with sample values.
 
-=> ReportCardService.java - Annotate with @Service
-   Inject Student using @Autowired
-   Method: public void generateReport()
-   Calculate:
-     - totalMarks = mathMarks + scienceMarks + englishMarks
-     - percentage = (totalMarks / 300) * 100
-     - grade -> A (>=80%), B (>=60%), C (>=40%), F (below 40%)
+=> BillCalculator.java - Annotate with @Component
+   Method: public double calculateBill(double units)
+   Rate Logic:
+     - First 100 units  -> Rs. 2 per unit
+     - Next 100 units   -> Rs. 4 per unit
+     - Above 200 units  -> Rs. 6 per unit
 
-=> AppConfig.java - @Configuration + @ComponentScan("com.report")
+=> BillService.java - Annotate with @Service
+   Inject Consumer and BillCalculator using @Autowired
+   Method: public void printBill()
+   Calculate total bill and print formatted output.
 
-=> MainApp.java - Load context, get bean, call generateReport()
+=> AppConfig.java - @Configuration + @ComponentScan("com.electricity")
+
+=> MainApp.java - Load context, get bean, call printBill()
 
 Expected Output:
 -----------------------------------------
-Report Card for Alice
-Total Marks: 240 / 300
-Percentage: 80.0%
-Grade: A
+Electricity Bill
+Consumer: Ramesh
+Units Consumed: 250
+Total Bill: Rs. 1100
 -----------------------------------------
 
 Test Cases:
-------------------------------------------------------------------
-| Name  | Math | Science | English | Total | Percentage | Grade |
-------------------------------------------------------------------
-| Alice | 80   | 85      | 75      | 240   | 80%        | A     |
-| Bob   | 60   | 55      | 65      | 180   | 60%        | B     |
-| Carol | 35   | 40      | 45      | 120   | 40%        | C     |
-| Dan   | 20   | 25      | 30      | 75    | 25%        | F     |
-------------------------------------------------------------------*/
+---------------------------------------------------------------
+| Name   | Units | Calculation              | Total Bill     |
+---------------------------------------------------------------
+| Ramesh | 250   | 100x2 + 100x4 + 50x6    | Rs. 1100       |
+| Suresh | 100   | 100x2                    | Rs. 200        |
+| Mahesh | 150   | 100x2 + 50x4             | Rs. 400        |
+| Ganesh | 50    | 50x2                     | Rs. 100        |
+---------------------------------------------------------------*/
