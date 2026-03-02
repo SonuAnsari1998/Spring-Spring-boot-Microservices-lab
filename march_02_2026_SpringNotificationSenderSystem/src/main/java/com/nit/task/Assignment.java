@@ -1,0 +1,50 @@
+/*🧩 Task 3 — Notification Sender System
+
+🎯 Objective:
+Use @Qualifier to decide which notification channel (Email / SMS / WhatsApp) should be used by a NotificationService.
+
+🧱 Class-wise Design
+
+1️. Interface — MessageService
+Method:
+
+void send(String message)
+
+2️. Implementations:
+
+EmailService: prints "Email sent: <message>"
+
+SmsService: prints "SMS sent: <message>"
+
+WhatsAppService: prints "WhatsApp sent: <message>"
+
+3️. Class — NotificationService
+Field:
+
+MessageService messageService
+
+Injection:
+
+@Autowired
+
+@Qualifier("whatsAppService")
+
+Method:
+
+notifyUser(String msg) → calls messageService.send(msg)
+
+4️. AppConfig Class
+
+@Configuration, @ComponentScan("com.example")
+
+5️. MainApp Class
+
+Load context
+
+Get NotificationService bean
+
+Call notifyUser("Meeting at 4 PM")
+
+📘 Expected Output:
+
+WhatsApp sent: Meeting at 4 PM*/
